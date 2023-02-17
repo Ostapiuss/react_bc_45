@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react_bc_45/static/css/main.ddd1b3ed.css",
+    "main.js": "/react_bc_45/static/js/main.bc5fedbb.js",
+    "index.html": "/react_bc_45/index.html",
+    "main.ddd1b3ed.css.map": "/react_bc_45/static/css/main.ddd1b3ed.css.map",
+    "main.bc5fedbb.js.map": "/react_bc_45/static/js/main.bc5fedbb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ddd1b3ed.css",
+    "static/js/main.bc5fedbb.js"
+  ]
+}
