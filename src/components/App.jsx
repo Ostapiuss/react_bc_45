@@ -1,12 +1,13 @@
 import React from "react";
 
-import './App.scss';
+import '../../node_modules/modern-normalize/modern-normalize.css';
+import 'index.css';
 
 class App extends React.Component {
   render() {
     return (
       <div className="app">
-        Work HERE
+        WORK HERE
       </div>
     )
   }
