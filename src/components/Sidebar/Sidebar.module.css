@@ -1,0 +1,23 @@
+.aside {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.logo {
+  height: 80px;
+  background-color: var(--logo-bg-color);
+}
+.user {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: auto;
+  padding-left: 25px;
+  padding-bottom: 40px;
+}
+
+.navLink {
+  composes: user;
+  padding: 10px;
+  padding-left: 25px;
+}
