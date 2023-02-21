@@ -15,9 +15,3 @@
   padding-left: 25px;
   padding-bottom: 40px;
 }
-
-.navLink {
-  composes: user;
-  padding: 10px;
-  padding-left: 25px;
-}
