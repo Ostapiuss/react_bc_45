@@ -1,5 +1,6 @@
 import style from './Menu.module.css';
 import { menuConfig } from 'constants/menu';
+import PropTypes  from 'prop-types';
 
 export function Menu() {
   return (
@@ -7,7 +8,7 @@ export function Menu() {
     <ul  className={style.navList}>
       {
         menuConfig.map(({ title, image, id }) => {
-          return <MenuItem title={title} image={image} id={id}/>
+          return <MenuItem title={title} image={image} key={id}/>
         })
       }
     </ul>
@@ -16,9 +17,9 @@ export function Menu() {
   )
 }
 
-export function MenuItem({ title, image, id }) {
+export function MenuItem({ title, image}) {
   return(
-    <li className={style.navItem} key={id}>
+    <li className={style.navItem}>
       <a  className={style.navLink} href="#">
         <img src={image} alt="universities" />
         <span>{title}</span>
@@ -26,3 +27,9 @@ export function MenuItem({ title, image, id }) {
     </li>
   )
 }
+
+// MenuItem.propTypes = {
+//   title: PropTypes.string.isRequired,
+//   image: PropTypes.any.isRequired,
+//   id: PropTypes.number.isRequired,
+// }
