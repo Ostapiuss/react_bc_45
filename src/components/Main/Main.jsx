@@ -1,7 +1,5 @@
-export function Main() {
-    return (
-        <main>
-            <p>Main</p>
-        </main>
-    )
+import style from './Main.module.css';
+
+export function Main({ children }) {
+  return <main className={style.main}>{children}</main>;
 }
