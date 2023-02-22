@@ -1,0 +1,33 @@
+.universityContainer {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.universityCard {
+  width: 144px;
+}
+
+.universityIcon {
+  border-radius: 50%;
+}
+
+.universityBtnContainer {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.universityBtn {
+  border: none;
+  background-color: transparent;
+}
+
+.universityTitle {
+  margin-top: 6px;
+}
+
+.universityText {
+  margin-top: 6px;
+}
