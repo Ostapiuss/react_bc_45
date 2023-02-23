@@ -45,3 +45,12 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+.university-card {
+  padding: 32px;
+}
+
+.university-wrapper {
+  display: flex;
+  gap: 32px;
+}
