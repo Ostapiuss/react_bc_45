@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { StyledSection } from './StyledSection';
 import cn from 'classnames';
 
@@ -15,4 +16,11 @@ export function Section({ children, title, position, icon }) {
       <div className="section-content">{children}</div>
     </StyledSection>
   );
+}
+
+Section.propTypes = {
+  children: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
+  position: PropTypes.string,
+  icon: PropTypes.string.isRequired,
 }
