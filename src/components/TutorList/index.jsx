@@ -1,1 +1,1 @@
-import * from './TutorList';
+export * from './TutorList';
