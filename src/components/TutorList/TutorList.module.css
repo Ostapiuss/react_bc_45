@@ -1,9 +1,15 @@
+.tutorList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
 .tutorItem {
   display: flex;
 
   gap: 24px;
   padding: 24px;
-  margin-bottom: 15px;
 }
 
 .tutorClm {

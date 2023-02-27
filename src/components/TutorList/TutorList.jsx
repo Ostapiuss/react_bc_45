@@ -7,7 +7,7 @@ import style from './TutorList.module.css';
 
 export function TutorList({ tutors }) {
   return (
-    <>
+    <div className={style.tutorList}>
       {tutors.map(
         ({ firstName, lastName, patronymic, phone, email, city, options }) => (
           <TutorItem
@@ -22,7 +22,7 @@ export function TutorList({ tutors }) {
           />
         )
       )}
-    </>
+    </div>
   );
 }
 export function TutorItem({
