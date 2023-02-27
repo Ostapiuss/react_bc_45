@@ -1,0 +1,23 @@
+.tutorItem {
+  display: flex;
+
+  gap: 24px;
+  padding: 24px;
+  margin-bottom: 15px;
+}
+
+.tutorClm {
+  display: flex;
+  flex-direction: column;
+}
+
+.tutorClm > span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tutorClm .tutorIcon {
+  width: 15px;
+  height: 15px;
+}

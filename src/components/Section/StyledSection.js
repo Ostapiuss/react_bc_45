@@ -2,6 +2,9 @@ import styled from '@emotion/styled';
 
 export const StyledSection = styled.section`
   .section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     margin-bottom: 32px;
 
     font-size: 14px;
@@ -12,5 +15,9 @@ export const StyledSection = styled.section`
 
   .position-right {
     text-align: right;
+  }
+
+  .section-content {
+    margin-bottom: 32px;
   }
 `;
