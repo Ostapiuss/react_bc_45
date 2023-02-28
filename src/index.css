@@ -37,10 +37,15 @@ ul {
 }
 
 .app {
-  display: grid;
-  grid-template-columns: 320px 1fr;
+  position: relative;
   min-height: 100vh;
 }
+
+main {
+  position: absolute;
+  left: 320px;
+}
+
 a {
   text-decoration: none;
   color: inherit;

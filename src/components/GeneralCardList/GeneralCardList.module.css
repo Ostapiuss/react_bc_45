@@ -6,9 +6,10 @@
 }
 .generalCard {
   display: flex;
+  align-items: center;
   width: 370px;
-  height: auto;
   padding: 19px 24px;
+  max-height: 72px;
   justify-content: space-between;
 }
 .generalCardBtn {

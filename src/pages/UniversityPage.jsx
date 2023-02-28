@@ -1,17 +1,24 @@
+import { useState } from 'react';
 import { Section } from 'components/Section';
 import { Card } from 'components/Card';
 import { Paper } from 'components/Paper';
 import { TutorList } from 'components/TutorList';
 import { Button } from 'components/Button';
 import { GeneralCardList } from 'components/GeneralCardList';
+import { TeacherForm } from 'components/TeacherForm';
 
 import universityData from 'constants/universityData.json';
 import catIcon from 'assets/images/cat.svg';
-import cityMarker from 'assets/images/city-marker.svg'
+import cityMarker from 'assets/images/city-marker.svg';
+import robot from 'assets/images/robot.svg';
 
 import style from 'pages/UniversityPage.module.css';
 
 export function UniversityPage() {
+  const [modeMenu, setModeMenu] = useState(false);
+  const toggleMenu = () => {
+    setModeMenu(!modeMenu);
+  };
   const cities = universityData.cities.map(city => ({ name: city }));
   return (
     <>
@@ -34,11 +41,16 @@ export function UniversityPage() {
       </Section>
       <Section icon={catIcon} title="Викладачі">
         <TutorList tutors={universityData.tutors} />
-        <Button title="Добавити викладача" />
+        {modeMenu && <TeacherForm />}
+        <Button title="Добавити викладача" onClick={toggleMenu} />
       </Section>
       <Section icon={cityMarker} title="Міста">
         <GeneralCardList list={cities} />
         <Button title="Додати місто" />
+      </Section>
+      <Section icon={robot} title="Факультети">
+        <GeneralCardList list={universityData.department} />
+        <Button title="Додати факультет" />
       </Section>
     </>
   );

@@ -12,7 +12,7 @@ class App extends React.Component {
       <div className="app">
         <Sidebar />
         <Main>
-        <UniversityPage/>
+          <UniversityPage />
         </Main>
       </div>
     );
