@@ -3,13 +3,16 @@ import { Card } from 'components/Card';
 import { Paper } from 'components/Paper';
 import { TutorList } from 'components/TutorList';
 import { Button } from 'components/Button';
+import { GeneralCardList } from 'components/GeneralCardList';
 
 import universityData from 'constants/universityData.json';
 import catIcon from 'assets/images/cat.svg';
+import cityMarker from 'assets/images/city-marker.svg'
 
 import style from 'pages/UniversityPage.module.css';
 
 export function UniversityPage() {
+  const cities = universityData.cities.map(city => ({ name: city }));
   return (
     <>
       <Section title="Информация о университете" position="right">
@@ -32,6 +35,10 @@ export function UniversityPage() {
       <Section icon={catIcon} title="Викладачі">
         <TutorList tutors={universityData.tutors} />
         <Button title="Добавити викладача" />
+      </Section>
+      <Section icon={cityMarker} title="Міста">
+        <GeneralCardList list={cities} />
+        <Button title="Додати місто" />
       </Section>
     </>
   );

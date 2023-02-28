@@ -1,0 +1,17 @@
+.cardList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+.generalCard {
+  display: flex;
+  width: 370px;
+  height: auto;
+  padding: 19px 24px;
+  justify-content: space-between;
+}
+.generalCardBtn {
+  border: 0;
+  background-color: transparent;
+}
