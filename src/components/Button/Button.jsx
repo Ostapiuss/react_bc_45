@@ -7,7 +7,12 @@ import addIcon from 'assets/images/add-icon.svg';
 
 export function Button({ title, onClick, className, ...restProps }) {
   return (
-    <button className= {cn(style.button, className)} {...restProps} type="button" onClick={onClick}>
+    <button
+      className={cn(style.button, className)}
+      type="button"
+      onClick={onClick}
+      {...restProps}
+    >
       <img src={addIcon} alt="Add icon" />
       {title.toUpperCase()}
     </button>
