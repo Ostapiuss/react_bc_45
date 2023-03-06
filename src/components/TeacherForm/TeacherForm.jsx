@@ -13,15 +13,17 @@ const TEACHER_FORM_BUILD = [
   { placeholder: 'Місто', name: 'city' },
 ];
 
+const INITIAL_TEACHER = {
+  firstName: '',
+  lastName: '',
+  patronymic: '',
+  phone: '',
+  email: '',
+  city: '',
+};
+
 export function TeacherForm({ addTutor }) {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    patronymic: '',
-    phone: '',
-    email: '',
-    city: '',
-  });
+  const [formData, setFormData] = useState(INITIAL_TEACHER);
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -40,6 +42,7 @@ export function TeacherForm({ addTutor }) {
   function onSubmit(e) {
     e.preventDefault();
     addTutor(formData);
+    setFormData(INITIAL_TEACHER);
   }
 
   const isEnableSubmit = checkSubmitAbility(formData);
@@ -56,6 +59,7 @@ export function TeacherForm({ addTutor }) {
                 name={name}
                 className={style.formInput}
                 onChange={handleChange}
+                value={formData[name]}
               />
             </label>
           );

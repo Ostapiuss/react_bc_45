@@ -1,4 +1,4 @@
-import style from './WidgetForm.module.css';
+import style from '../TeacherForm/TeacherForm.module.css';
 import { useState } from 'react';
 
 import { Paper } from 'components/Paper';
@@ -15,6 +15,7 @@ export const WidgetForm = ({
   function onSubmit(e) {
     e.preventDefault();
     handleSubmit(widgetFormData);
+    setWidgetFormData('');
   }
 
   function handleChange(event) {
@@ -35,6 +36,7 @@ export const WidgetForm = ({
             name={placeholder}
             className={style.formInput}
             onChange={handleChange}
+            value={widgetFormData}
           />
         </label>
 
