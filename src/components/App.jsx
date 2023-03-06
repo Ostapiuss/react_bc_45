@@ -1,7 +1,7 @@
 import React from 'react';
 import { Sidebar } from './Sidebar';
 import { Main } from './Main';
-import { UniversityPage } from 'pages/UniversityPage';
+import MainRoutes from './MainRoutes';
 
 import '../../node_modules/modern-normalize/modern-normalize.css';
 import 'index.css';
@@ -10,9 +10,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <Sidebar />
+          <Sidebar />
         <Main>
-          <UniversityPage />
+         <MainRoutes/>
         </Main>
       </div>
     );

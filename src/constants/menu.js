@@ -8,11 +8,13 @@ export const menuConfig = [
     id: 1,
     title: 'Університет',
     image: universitiesIcon,
+    pathName: 'university',
   },
 
   {
     id: 2,
     title: 'Факультети',
     image: facultiesIcon,
+    pathName: 'faculty',
   },
 ];

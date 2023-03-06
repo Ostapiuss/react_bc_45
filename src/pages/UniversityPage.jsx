@@ -12,7 +12,6 @@ import catIcon from 'assets/images/cat.svg';
 import cityMarker from 'assets/images/city-marker.svg';
 import robot from 'assets/images/robot.svg';
 
-import style from 'pages/UniversityPage.module.css';
 import { WidgetForm } from 'components/WidgetForm';
 
 const FORM_KEYS = {
