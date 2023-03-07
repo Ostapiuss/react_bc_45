@@ -1,0 +1,16 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  left: -320px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.loader {
+  z-index: 1200;
+}

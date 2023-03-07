@@ -41,10 +41,10 @@ ul {
   min-height: 100vh;
 }
 
-main {
+/* .main {
   position: absolute;
   left: 320px;
-}
+} */
 
 a {
   text-decoration: none;

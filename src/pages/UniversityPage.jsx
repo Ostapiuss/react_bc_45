@@ -20,7 +20,7 @@ const FORM_KEYS = {
   facultyForm: 'faculty',
 };
 
-export function UniversityPage() {
+function UniversityPage() {
   const [modeMenu, setModeMenu] = useState([]);
 
   const [tutors, setTutors] = useState(universityData.tutors);
@@ -133,3 +133,5 @@ export function UniversityPage() {
     </>
   );
 }
+
+export default UniversityPage;

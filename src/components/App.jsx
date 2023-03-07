@@ -10,9 +10,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-          <Sidebar />
+        <Sidebar />
         <Main>
-         <MainRoutes/>
+          <MainRoutes />
         </Main>
       </div>
     );

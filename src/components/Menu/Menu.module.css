@@ -7,6 +7,15 @@
   padding-bottom: 40px;
   padding: 10px;
   padding-left: 25px;
+
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.active {
+  composes: navLink;
+  color: var(--primary);
 }
 
 .navList {

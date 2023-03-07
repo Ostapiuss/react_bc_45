@@ -8,7 +8,7 @@ export const menuConfig = [
     id: 1,
     title: 'Університет',
     image: universitiesIcon,
-    pathName: 'university',
+    pathName: '/',
   },
 
   {
