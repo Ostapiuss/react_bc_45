@@ -3,7 +3,8 @@ import cn from 'classnames';
 
 import style from './Button.module.css';
 
-import addIcon from 'assets/images/add-icon.svg';
+import {ReactComponent as AddIcon} from 'assets/images/add-icon.svg';
+
 
 export function Button({ title, onClick, className, ...restProps }) {
   return (
@@ -13,7 +14,7 @@ export function Button({ title, onClick, className, ...restProps }) {
       onClick={onClick}
       {...restProps}
     >
-      <img src={addIcon} alt="Add icon" />
+     <AddIcon className={style.btnIcon}/>
       {title.toUpperCase()}
     </button>
   );

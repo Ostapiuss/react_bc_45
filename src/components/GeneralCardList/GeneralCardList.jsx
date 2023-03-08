@@ -2,10 +2,12 @@ import { Paper } from 'components/Paper';
 import style from './GeneralCardList.module.css';
 import shortid from 'shortid';
 import { useState, useEffect } from 'react';
+import {Modal} from '../Modal';
 
 import dots from 'assets/images/dots.svg';
 import { ReactComponent as AddIcon } from 'assets/images/add-icon.svg';
 import { ReactComponent as DelIcon } from 'assets/images/delete-icon.svg';
+import { EditModal } from 'shared/modals/EditModal';
 
 export function GeneralCardList({ list }) {
   return (
@@ -19,14 +21,24 @@ export function GeneralCardList({ list }) {
 
 function GeneralCard({ name }) {
   const [anchor, setAnchor] = useState(null);
+  const [isOpenModal, setIsOpenModal] =useState(false);
 
   useEffect(() => {
     window.addEventListener('keydown', onKeyDown);
-
+    // window.addEventListener('click', onOutsideClick);
     return () => {
       window.removeEventListener('keydown', onKeyDown);
+      // window.removeEventListener('click', onOutsideClick);
     };
   }, []);
+
+  // const onOutsideClick = e => {
+  //   if(anchor){
+  //     setAnchor(null);
+  //     return;
+  //   }
+  //   setAnchor(e.currentTarget);
+  // }
 
   const onKeyDown = e => {
     if (e.code === 'Escape') {
@@ -35,8 +47,16 @@ function GeneralCard({ name }) {
   };
 
   const handlerAnchorClick = e => {
+    if(anchor){
+      setAnchor(null);
+      return;
+    }
     setAnchor(e.currentTarget);
   };
+
+  const handleOpenModal= () =>{
+  setIsOpenModal(true)
+  }
 
   return (
     <Paper className={style.generalCard}>
@@ -50,7 +70,7 @@ function GeneralCard({ name }) {
       </button>
       {anchor && (
         <div className={style.action}>
-          <button type="button" className={style.actionBtn}>
+          <button type="button" className={style.actionBtn} onClick={handleOpenModal}>
             <AddIcon className={style.actionIcon} />
             Редагувати
           </button>
@@ -60,6 +80,13 @@ function GeneralCard({ name }) {
           </button>
         </div>
       )}
+      {
+        isOpenModal && (
+          <Modal onClose={()=>setIsOpenModal(false)}>
+            <EditModal placeholder="Міста"/>
+          </Modal>
+        )
+      }
     </Paper>
   );
 }
