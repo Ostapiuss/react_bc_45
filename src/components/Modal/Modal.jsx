@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
-import { Paper } from 'components/Paper'
+import { Paper } from 'components/Paper';
+import {ReactComponent as CloseIcon} from 'assets/images/close-icon.svg'
 
 import style from './Modal.module.css'
 
@@ -22,7 +23,12 @@ export function Modal({children, onClose}){
   return (
     <div className= {style.overlay}>
       <div className={style.modal}>
-      <Paper>
+      <Paper className={style.modalContent}>
+        <div className={style.wrapperModalBtn}>
+          <button className={style.buttonIcon} onClick={onClose}>
+          <CloseIcon/>
+          </button>
+        </div>
         {children}
       </Paper>
       </div>

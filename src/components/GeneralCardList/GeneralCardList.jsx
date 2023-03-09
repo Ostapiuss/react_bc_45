@@ -55,6 +55,7 @@ function GeneralCard({ name }) {
   };
 
   const handleOpenModal= () =>{
+  setAnchor(null);
   setIsOpenModal(true)
   }
 

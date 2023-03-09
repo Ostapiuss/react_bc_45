@@ -8,10 +8,10 @@ export function EditModal({placeholder}){
     <div className= {style.modalEditWrapper}>
      <div className={style.modalEditTypography}>
        <EditIcon className={style.modalEditIcon}/>
-      <p>Редагувати інформацію</p>
+      <p className={style.modalEditTitle}>Редагувати інформацію</p>
      </div>
       <label>
-        <input type="text" required placeholder={placeholder}/>
+        <input className={style.modalEditInput} type="text" required placeholder={placeholder}/>
       </label>
       <Button
         className={style.modalEditSaveBtn}

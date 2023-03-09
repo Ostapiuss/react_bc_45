@@ -14,3 +14,18 @@
   left: 50%;
   transform: translateX(-50%);
 }
+.modalContent {
+  min-height: 300px;
+  padding: 25px 40px;
+}
+.wrapperModalBtn {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.buttonIcon {
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Section } from 'components/Section';
 import { Card } from 'components/Card';
 import { Paper } from 'components/Paper';
@@ -29,7 +30,8 @@ function UniversityPage() {
     universityData.cities.map(city => ({ name: city }))
   );
 
-  const [faculties, setFaculties] = useState(universityData.department);
+  const faculties = useSelector(state => state.faculty.department);
+  console.log(faculties);
 
   const toggleMenu = key => {
     const element = modeMenu.find(el => el === key);
@@ -44,7 +46,6 @@ function UniversityPage() {
 
   const addFaculty = faculty => {
     const newFaculty = { name: faculty };
-    setFaculties([...faculties, newFaculty]);
   };
 
   const addTutor = tutor => {
