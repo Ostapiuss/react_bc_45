@@ -1,13 +1,41 @@
 {
   "files": {
-    "main.css": "/react_bc_45/static/css/main.08dd5a43.css",
-    "main.js": "/react_bc_45/static/js/main.4f9aa665.js",
-    "index.html": "/react_bc_45/index.html",
-    "main.08dd5a43.css.map": "/react_bc_45/static/css/main.08dd5a43.css.map",
-    "main.4f9aa665.js.map": "/react_bc_45/static/js/main.4f9aa665.js.map"
+    "main.css": "/static/css/main.b8580067.css",
+    "main.js": "/static/js/main.b7d007ee.js",
+    "static/css/94.01e05831.chunk.css": "/static/css/94.01e05831.chunk.css",
+    "static/js/94.3d3e0554.chunk.js": "/static/js/94.3d3e0554.chunk.js",
+    "static/css/131.101f37b7.chunk.css": "/static/css/131.101f37b7.chunk.css",
+    "static/js/131.d831b1f8.chunk.js": "/static/js/131.d831b1f8.chunk.js",
+    "static/js/236.2a097a4c.chunk.js": "/static/js/236.2a097a4c.chunk.js",
+    "static/js/726.de66602b.chunk.js": "/static/js/726.de66602b.chunk.js",
+    "static/media/robot.svg": "/static/media/robot.03e42768dadfb523e8a906cc791efa65.svg",
+    "static/media/city-marker.svg": "/static/media/city-marker.d519331d81ed40935facdf00588d0dc0.svg",
+    "static/media/cat.svg": "/static/media/cat.7cafd0c49822c69d4bfc86b6ab3e26aa.svg",
+    "static/media/edit-icon.svg": "/static/media/edit-icon.734d208df6128fa22074c2a246062243.svg",
+    "static/media/universityIcon.svg": "/static/media/universityIcon.80fb8fbb7dd1df4c6c14fdbc50d71121.svg",
+    "static/media/faculties.svg": "/static/media/faculties.bb47822a700dbb50edea07712dc86bb8.svg",
+    "static/media/delete-icon.svg": "/static/media/delete-icon.af7a7887c4dadd35a913fb700c9f79bc.svg",
+    "static/media/dots.svg": "/static/media/dots.0da479e7fe80a948ef922124776aaeec.svg",
+    "static/media/close-icon.svg": "/static/media/close-icon.96e84c3ccbe09b4c5363d59c60242644.svg",
+    "static/media/edit.svg": "/static/media/edit.68042d9a7d6d4a9fc2f256e4735285f5.svg",
+    "static/media/user-ava-icon.svg": "/static/media/user-ava-icon.025ac78724f256cf15f107ec81d042f7.svg",
+    "static/media/add-icon.svg": "/static/media/add-icon.af86abd1b8ddc001dd8ec9c3086a6839.svg",
+    "static/media/location-icon.svg": "/static/media/location-icon.9efeb93c953dc5d5cae095bee76ea621.svg",
+    "static/media/phone.svg": "/static/media/phone.51b5ae291dd8c16f054c5079afe0313c.svg",
+    "index.html": "/index.html",
+    "static/media/universities.svg": "/static/media/universities.b1125fe67519accc3f2287d9fdbe299d.svg",
+    "static/media/message-icon.svg": "/static/media/message-icon.f1340bed32c208dfd82a9dc2e6402c8a.svg",
+    "main.b8580067.css.map": "/static/css/main.b8580067.css.map",
+    "main.b7d007ee.js.map": "/static/js/main.b7d007ee.js.map",
+    "94.01e05831.chunk.css.map": "/static/css/94.01e05831.chunk.css.map",
+    "94.3d3e0554.chunk.js.map": "/static/js/94.3d3e0554.chunk.js.map",
+    "131.101f37b7.chunk.css.map": "/static/css/131.101f37b7.chunk.css.map",
+    "131.d831b1f8.chunk.js.map": "/static/js/131.d831b1f8.chunk.js.map",
+    "236.2a097a4c.chunk.js.map": "/static/js/236.2a097a4c.chunk.js.map",
+    "726.de66602b.chunk.js.map": "/static/js/726.de66602b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.08dd5a43.css",
-    "static/js/main.4f9aa665.js"
+    "static/css/main.b8580067.css",
+    "static/js/main.b7d007ee.js"
   ]
 }
