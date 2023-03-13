@@ -3,25 +3,44 @@ import style from './GeneralCardList.module.css';
 import shortid from 'shortid';
 import { useState, useEffect } from 'react';
 import {Modal} from '../Modal';
+import cn from 'classnames';
 
 import dots from 'assets/images/dots.svg';
 import { ReactComponent as AddIcon } from 'assets/images/add-icon.svg';
 import { ReactComponent as DelIcon } from 'assets/images/delete-icon.svg';
 import { EditModal } from 'shared/modals/EditModal';
 
-export function GeneralCardList({ list }) {
+export function GeneralCardList({ list, className, isFullItemWidth, onEditCard }) {
+  const [isOpenModal, setIsOpenModal] =useState(false);
+  const [itemId, setItemId] = useState(null);
   return (
-    <div className={style.cardList}>
-      {list.map((item, index) => (
-        <GeneralCard name={item.name} key={shortid()} />
+    <>
+    <div className={cn(style.cardList, className)}>
+      {list.map((item) => (
+        <GeneralCard
+          name={item.name}
+          id={item.id}
+          key={shortid()}
+          setItemId={setItemId}
+          isFullItemWidth={isFullItemWidth}
+          setIsOpenModal={setIsOpenModal}
+        />
       ))}
     </div>
+       {
+        isOpenModal && (
+          <Modal onClose={()=>setIsOpenModal(false)}>
+            <EditModal placeholder="Міста" onSubmit={()=>{onEditCard(itemId)}}/>
+          </Modal>
+        )
+      }
+      </>
   );
 }
 
-function GeneralCard({ name }) {
+function GeneralCard({ name, id, isFullItemWidth, setIsOpenModal, setItemId }) {
   const [anchor, setAnchor] = useState(null);
-  const [isOpenModal, setIsOpenModal] =useState(false);
+
 
   useEffect(() => {
     window.addEventListener('keydown', onKeyDown);
@@ -56,11 +75,12 @@ function GeneralCard({ name }) {
 
   const handleOpenModal= () =>{
   setAnchor(null);
-  setIsOpenModal(true)
+  setIsOpenModal(true);
+  setItemId(id);
   }
 
   return (
-    <Paper className={style.generalCard}>
+    <Paper className={cn(style.generalCard, {[style.itemFullWidth]: isFullItemWidth })}>
       <p>{name}</p>
       <button
         type="button"
@@ -81,13 +101,6 @@ function GeneralCard({ name }) {
           </button>
         </div>
       )}
-      {
-        isOpenModal && (
-          <Modal onClose={()=>setIsOpenModal(false)}>
-            <EditModal placeholder="Міста"/>
-          </Modal>
-        )
-      }
     </Paper>
   );
 }

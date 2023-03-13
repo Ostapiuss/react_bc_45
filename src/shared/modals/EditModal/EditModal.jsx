@@ -2,7 +2,7 @@ import style from './EditModal.module.css';
 import { ReactComponent as EditIcon } from 'assets/images/edit-icon.svg';
 import { Button } from 'components/Button';
 
-export function EditModal({placeholder}){
+export function EditModal({placeholder, onSubmit}){
 
   return (
     <div className= {style.modalEditWrapper}>
@@ -16,7 +16,10 @@ export function EditModal({placeholder}){
       <Button
         className={style.modalEditSaveBtn}
         title="Зберегти"
+        onClick={onSubmit}
         />
     </div>
   )
 }
+
+

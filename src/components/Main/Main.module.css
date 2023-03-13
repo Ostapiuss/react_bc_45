@@ -1,5 +1,7 @@
 .main {
   position: absolute;
+  width: calc(100% - 320px);
+  min-height: 100%;
   left: 320px;
 
   padding: 28px 32px 32px;
