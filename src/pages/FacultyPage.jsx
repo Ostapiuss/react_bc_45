@@ -5,7 +5,6 @@ import { GeneralCardList } from 'components/GeneralCardList';
 
 export default function FacultyPage() {
   const faculties = useSelector(state => state.faculty.department);
-  console.log(faculties);
   return (
   <>
   <Section title="Факультети">

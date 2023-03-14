@@ -15,7 +15,14 @@ const facultySlice = createSlice({
       state.department.push(action.payload);
     },
     editFaculty(state, action) {
-      console.log(action);
+      const newDepartment = state.department.reduce((acc, value) => {
+        const currentValue = { ...value };
+        if (currentValue.id === action.payload.id) {
+          currentValue.name = action.payload.name;
+        }
+        return [...acc, currentValue];
+      }, []);
+      return { ...state, department: newDepartment };
     },
   },
 });

@@ -12,7 +12,12 @@ import { EditModal } from 'shared/modals/EditModal';
 
 export function GeneralCardList({ list, className, isFullItemWidth, onEditCard }) {
   const [isOpenModal, setIsOpenModal] =useState(false);
-  const [itemId, setItemId] = useState(null);
+  const [item, setItem] = useState(null);
+
+  function onCloseModal(){
+    setIsOpenModal(false);
+  }
+
   return (
     <>
     <div className={cn(style.cardList, className)}>
@@ -21,7 +26,7 @@ export function GeneralCardList({ list, className, isFullItemWidth, onEditCard }
           name={item.name}
           id={item.id}
           key={shortid()}
-          setItemId={setItemId}
+          setItem={setItem}
           isFullItemWidth={isFullItemWidth}
           setIsOpenModal={setIsOpenModal}
         />
@@ -29,8 +34,13 @@ export function GeneralCardList({ list, className, isFullItemWidth, onEditCard }
     </div>
        {
         isOpenModal && (
-          <Modal onClose={()=>setIsOpenModal(false)}>
-            <EditModal placeholder="Міста" onSubmit={()=>{onEditCard(itemId)}}/>
+          <Modal onClose={onCloseModal}>
+            <EditModal
+              modalData={item}
+              placeholder="Міста"
+              onSubmit={onEditCard}
+              onClose={onCloseModal}
+            />
           </Modal>
         )
       }
@@ -38,26 +48,19 @@ export function GeneralCardList({ list, className, isFullItemWidth, onEditCard }
   );
 }
 
-function GeneralCard({ name, id, isFullItemWidth, setIsOpenModal, setItemId }) {
+function GeneralCard({ name, id, isFullItemWidth, setIsOpenModal, setItem }) {
   const [anchor, setAnchor] = useState(null);
 
 
   useEffect(() => {
     window.addEventListener('keydown', onKeyDown);
-    // window.addEventListener('click', onOutsideClick);
+
     return () => {
       window.removeEventListener('keydown', onKeyDown);
-      // window.removeEventListener('click', onOutsideClick);
+
     };
   }, []);
 
-  // const onOutsideClick = e => {
-  //   if(anchor){
-  //     setAnchor(null);
-  //     return;
-  //   }
-  //   setAnchor(e.currentTarget);
-  // }
 
   const onKeyDown = e => {
     if (e.code === 'Escape') {
@@ -76,7 +79,7 @@ function GeneralCard({ name, id, isFullItemWidth, setIsOpenModal, setItemId }) {
   const handleOpenModal= () =>{
   setAnchor(null);
   setIsOpenModal(true);
-  setItemId(id);
+  setItem({name, id});
   }
 
   return (
