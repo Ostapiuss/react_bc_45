@@ -2,9 +2,9 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const INITIAL_FACULTY_STATE = {
   department: [
-    { id: 1, name: 'Факультет информатики и выычислительной техники' },
-    { id: 2, name: 'Факультет искуственого интелекта' },
-    { id: 3, name: 'Факультет аналитики' },
+    { id: '1', name: 'Факультет информатики и выычислительной техники' },
+    { id: '2', name: 'Факультет искуственого интелекта' },
+    { id: '3', name: 'Факультет аналитики' },
   ],
 };
 const facultySlice = createSlice({

@@ -7,7 +7,7 @@ import { TutorList } from 'components/TutorList';
 import { Button } from 'components/Button';
 import { GeneralCardList } from 'components/GeneralCardList';
 import { TeacherForm } from 'components/TeacherForm';
-import { addFaculty, editFaculty } from 'store/facultySlice';
+import { addFaculty } from 'store/facultySlice';
 
 import universityData from 'constants/universityData.json';
 import catIcon from 'assets/images/cat.svg';
@@ -61,10 +61,6 @@ const addCity = city => {
 const isModeMenuIncludes = key => {
   return modeMenu.includes(key);
 };
-
-const handleEditModal = (id) =>{
-  dispatch(editFaculty(id));
-}
 
 const isTeacherFormOpened = isModeMenuIncludes(FORM_KEYS.teacherForm);
 const isCityFormOpened = isModeMenuIncludes(FORM_KEYS.cityForm);
@@ -120,7 +116,7 @@ return (
     </Section>
 
     <Section icon={robot} title="Факультети">
-      <GeneralCardList list={faculties} onEditCard={handleEditModal}/>
+      <GeneralCardList list={faculties}/>
       {isFacultiesFormOpened && (
         <WidgetForm
           handleSubmit={onAddFaculty}

@@ -14,7 +14,7 @@ export const StyledSection = styled.section`
   }
 
   .position-right {
-    text-align: right;
+    justify-content: flex-end;
   }
 
   .section-content {
